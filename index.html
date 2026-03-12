@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Zhang Shengjun</title>
+    <style>
+      :root {
+        --bg: #ffffff;
+        --text: #0f172a;
+        --muted: #475569;
+        --soft: #f8fafc;
+        --border: #e2e8f0;
+        --link: #0f172a;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        font-family: "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+        background: var(--bg);
+        color: var(--text);
+        line-height: 1.7;
+      }
+
+      a {
+        color: var(--link);
+        text-decoration-thickness: 1px;
+        text-underline-offset: 3px;
+      }
+
+      .container {
+        max-width: 1080px;
+        margin: 0 auto;
+        padding: 40px 24px 72px;
+      }
+
+      .hero {
+        display: grid;
+        grid-template-columns: 1.5fr 0.9fr;
+        gap: 32px;
+        align-items: start;
+      }
+
+      .eyebrow {
+        font-size: 12px;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #64748b;
+        margin: 0 0 12px 0;
+      }
+
+      h1 {
+        font-size: 48px;
+        line-height: 1.1;
+        margin: 0;
+      }
+
+      .lead {
+        font-size: 20px;
+        color: var(--muted);
+        max-width: 720px;
+        margin-top: 18px;
+      }
+
+      .button-row {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 12px;
+        margin-top: 24px;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 10px 16px;
+        border: 1px solid #cbd5e1;
+        border-radius: 18px;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 600;
+        background: #fff;
+      }
+
+      .card {
+        border: 1px solid var(--border);
+        border-radius: 24px;
+        background: #fff;
+        box-shadow: 0 8px 24px rgba(15, 23, 42, 0.04);
+      }
+
+      .profile-card {
+        padding: 24px;
+        background: var(--soft);
+      }
+
+      .profile-photo {
+        width: 100%;
+        aspect-ratio: 4 / 5;
+        object-fit: cover;
+        border-radius: 18px;
+        border: 1px solid #cbd5e1;
+        display: block;
+        background: #fff;
+      }
+
+      .profile-list {
+        margin: 24px 0 0 0;
+      }
+
+      .profile-list dt {
+        font-weight: 700;
+        margin-top: 16px;
+      }
+
+      .profile-list dd {
+        margin: 4px 0 0 0;
+        color: var(--muted);
+      }
+
+      .grid-3 {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+        margin-top: 56px;
+      }
+
+      .small-card {
+        padding: 24px;
+      }
+
+      .small-card h2,
+      section h2 {
+        margin: 0;
+        font-size: 28px;
+        line-height: 1.2;
+      }
+
+      .small-card h3 {
+        margin: 0;
+        font-size: 20px;
+      }
+
+      .muted {
+        color: var(--muted);
+      }
+
+      section {
+        margin-top: 64px;
+      }
+
+      .papers {
+        display: grid;
+        gap: 16px;
+        margin-top: 24px;
+      }
+
+      .paper-item,
+      .two-col-card {
+        padding: 24px;
+      }
+
+      .two-col {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+      }
+
+      footer {
+        margin-top: 72px;
+        padding-top: 24px;
+        border-top: 1px solid var(--border);
+        color: #64748b;
+        font-size: 14px;
+      }
+
+      @media (max-width: 900px) {
+        .hero,
+        .grid-3,
+        .two-col {
+          grid-template-columns: 1fr;
+        }
+
+        h1 {
+          font-size: 38px;
+        }
+
+        .lead {
+          font-size: 18px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <main class="container">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Homepage</p>
+          <h1>Zhang Shengjun</h1>
+          <p class="lead">
+            PhD Student at Université Paris-Saclay. My research interests are probability theory and related areas of mathematics.
+          </p>
+
+          <div class="button-row">
+            <a class="button" href="mailto:zhang.shengjun@universite-paris-saclay.fr">Email</a>
+            <a class="button" href="#papers">Publications</a>
+            <a class="button" href="#education">Education</a>
+          </div>
+        </div>
+
+        <aside class="card profile-card">
+          <img class="profile-photo" src="photo.jpg" alt="Zhang Shengjun" />
+          <dl class="profile-list">
+            <dt>Affiliation</dt>
+            <dd>Université Paris-Saclay</dd>
+
+            <dt>Field</dt>
+            <dd>Probability Theory</dd>
+
+            <dt>Location</dt>
+            <dd>France</dd>
+          </dl>
+        </aside>
+      </section>
+
+      <section class="grid-3">
+        <div class="card small-card">
+          <h3>Research Interests</h3>
+          <p class="muted">
+            Probability theory
+          </p>
+        </div>
+
+        <div class="card small-card">
+          <h3>Current Position</h3>
+          <p class="muted">PhD Student, Université Paris-Saclay</p>
+        </div>
+
+        <div class="card small-card">
+          <h3>Contact</h3>
+          <p class="muted">Email: zhang.shengjun(at)universite-paris-saclay.fr</p>
+          <p class="muted">Office: Institut de mathématiques d'Orsay, Bâtiment 307, 3D3 (Mathematics Department, 3rd floor)</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>About</h2>
+        <p class="muted">
+          I am a PhD student at Université Paris-Saclay. My research focuses on probability theory and related areas of mathematics.
+        </p>
+      </section>
+
+      <section id="papers">
+        <h2>Publications / Preprints</h2>
+        <div class="papers">
+          <article class="card paper-item">
+            <p><strong>No publications yet</strong></p>
+            <p class="muted">A list of publications and preprints will be updated here.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="education">
+        <h2>Education</h2>
+        <div class="education">
+          <article class="card paper-item">
+            <p><strong>PhD in Mathematics</strong><br />Université Paris-Saclay, Orsay, France<br />2025 – present</p>
+            <p><strong>Master's level studies in Mathematics</strong><br />École normale supérieure de Paris, Département de mathématiques et applications, Paris, France<br />2022 – 2025</p>
+            <p><strong>M2 in Probability and Random Models</strong><br />Sorbonne Université, Paris, France<br />2023 – 2024</p>
+            <p><strong>BSc in Mathematics</strong><br />University of Science and Technology of China, Hefei, China<br />2019 – 2023</p>
+        </div>
+      </section>
+
+      <footer>© <span id="year"></span> Zhang Shengjun</footer>
+    </main>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+  </body>
+</html>
